@@ -41,9 +41,32 @@
   -->
 
   <main>
-    <div id="app"></div>
-  </main>
+    <div class="container">
+      <div class="todo-app">
+          <h2>Shopping List <Img src="/images/cartIcone.png" alt=""></h2>
+            <div class="row">
+              <input type="text" id="input-box" placeholder="Add Item">
+              <button onclick="addTask()">Add Item</button>
+            </div>
+           <ul id="list-container">
+            <!--
+            <li class="checked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li> 
+            -->
+           </ul> 
+      </div>
+    </div>
 
+
+    <!--
+    <h2>To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+    <button id="add">Add Task</button>
+    <ul id="taskList" onclick="taskListClick(event)"></ul>
+    <div id="app"></div>-->
+ 
+  </main>
   <!-- Add JavaScript File -->
   <script src="./script.js"></script>
 

@@ -21,7 +21,7 @@ let appContainer = document.getElementById(appID);
 //
 
 // Add a heading to the app container
-function inititialise() {
+function initialised() {
   // If anything is wrong with the app container then end
   if (!appContainer) {
     console.error("Error: Could not find app contianer");
@@ -37,7 +37,42 @@ function inititialise() {
   console.log("App successfully initialised");
 }
 
+ const inputBox = document.getElementById("input-box");
+  const listContainer = document.getElementById("list-container");
+  
+  function addTask() {
+   if (inputBox.value === '') {
+    alert("Add Item");
+    }
+    else{
+      let li = document.createElement("li");
+      li.innerHTML = inputBox.value;
+
+      const deleteBtn = document.createElement('button');
+  deleteBtn.className = 'deleteBtn';
+  deleteBtn.textContent = 'delete';
+  deleteBtn.addEventListener('click', function() {
+    li.remove();
+    });
+
+    li.appendChild(deleteBtn);
+    listContainer.appendChild(li);
+    inputBox.Value="";
+  }
+}
+  function taskListClick(event) {
+    if (event.target.tagName === 'BUTTON') {
+      const li = event.target.closest('li');
+      if (event.target.classList.contains('deleteBtn')) {
+        li.remove();
+      }
+    } else if (event.target.tagName === 'DIV') {
+        event.target.parentElement.classList.toggle('completed');
+      }
+    
+  }
+
+
 //
 // Inits & Event Listeners
 //
-inititialise();
