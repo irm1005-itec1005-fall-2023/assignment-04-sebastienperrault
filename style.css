@@ -29,17 +29,197 @@
 */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+  color: black;
+  background-image: url(images/Mall.jpg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color:#003049;
+  margin-bottom: 1rem;
+}
+
+#new-item-form {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-item-input {
+  flex: 1 1 0%;
+  background-color: ghostwhite;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: black;
+  font-size: 1.25rem;
+}
+
+#new-item-input::placeholder {
+color: gray;
+}
+
+#new-item-submit {
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-image: none;
+  background-color: antiquewhite;
 }
 
 main {
-  min-height: 100vh;
+  max-width: 800px;
+  padding: 2rem 1rem;
+  width: 100%;
+  margin: 0 auto;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+.item-list {
+  padding: 1rem;
+}
+
+.item-list h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #003049;
+  margin-bottom: 1rem;
+}
+
+#items .item {
+  display: flex;
+  justify-content: space-between;
+  background-color: antiquewhite;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+#items .item .content {
+  flex: 1 1 0%;
+}
+
+#items .item .content .text {
+  color: rgb(0, 0, 0);
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+#items .item .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.item .actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.app {
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 1.875rem;
+}
+.container{
+  padding: 2rem 2.5rem;
+  background-color: #e63946;
+  box-shadow: 0 1px;
+  border-radius: 10%;
+}
+
+
+/*
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todo-app h2{
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-app h2 Img{
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+
+button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #491b1d;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul li{
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+}
+
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  background-image: url();
+}
+
+ */ 
 
 
 /****** Screen reader text utility clsas *******/
