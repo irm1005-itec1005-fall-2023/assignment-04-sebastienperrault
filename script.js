@@ -104,24 +104,7 @@ form.addEventListener('submit', (e) => {
   item_delete_el.addEventListener('click', ()=> {
     list_el.removeChild(item_el);
   })
-  /*const itemsCheck = document.querySelectorAll(".item-check");
-  itemsCheck.forEach((checkbox)=> {
-    checkbox.onChange = () => {
-      checkbox.nextElementSibling,classList.toggle("completed");
-      if (checkbox.checked) {
-
-      
-        taskCount -=1;
-    ``} else {
-      taskCount +=1;
-    }
-    displayCount(taskCount);
-    }
-    taskCount += 1;
-    displayCount(taskCount);
-    newTaskInput.value = "";
-  })
-    */
+  
   });
 
 
@@ -132,7 +115,8 @@ form.addEventListener('submit', (e) => {
 
 
 
-/*
+/*  Old java of upd 1 now scratch out:
+
 let itemData = null;
 
 itemContainer.innerHTML="";
